@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  
+  <script src="Log.js"></script>
+  <script src="Box.js"></script>
+
+</head>
+
+<body>
+
+  <a-scene background="color:#000000">
+
+    <a-camera position="0 0 5">
+
+    </a-camera>
+
+    <a-assets>      
+
+      <a-asset-item id="table-obj" src="./models/tinker.obj"></a-asset-item>
+      <a-asset-item id="table-mtl" src="./models/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="text-obj" src="./text/tinker.obj"></a-asset-item>
+      <a-asset-item id="text-mtl" src="./text/obj.mtl"></a-asset-item>
+
+      <a-asset-item id="star-obj" src="./stars/tinker.obj"></a-asset-item>
+      <a-asset-item id="star-mtl" src="./stars/obj.mtl"></a-asset-item>
+
+     <!--<a-asset-item id="table-gltf" src="./models/gltf/CoffeeTableModel.glb"></a-asset-item>--> 
+      
+    </a-assets>
+    
+    <a-entity log="message: Hi, it's me!"></a-entity>
+
+    <a-entity
+    position="-28.5 21.5 0"
+    text="font: exo2bold; align: center; width: 40; color: black; value: VIRTUAL FLIGHT"
+  ></a-entity>
+
+    <a-entity obj-model="obj: #table-obj; mtl: #table-mtl"  position="-2 -3 0" rotation="-90 -40 0" scale="0.03 0.02 0.03 "
+    move-box-on-click></a-entity>
+
+    <a-entity obj-model="obj: #text-obj; mtl: #text-mtl"  position="-2 2 0" rotation="-90 -2 0" scale="0.03 0.02 0.03 "
+    move-box-on-click></a-entity>
+
+    <a-entity obj-model="obj: #star-obj; mtl: #star-mtl"  position="-5 0 0" rotation="-90 -45 0" scale="0.02 0.01 0.01 "
+    move-box-on-click></a-entity>
+
+    <a-entity obj-model="obj: #star-obj; mtl: #star-mtl"  position="-5 3 0" rotation="-50 -40 " scale="0.01 0.01 0.01 "
+    move-box-on-click></a-entity>
+   
+   
+
+  </a-scene>
+
+</body>
+
+</html>
+
